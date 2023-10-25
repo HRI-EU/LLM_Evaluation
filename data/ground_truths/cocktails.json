@@ -1,0 +1,438 @@
+{
+    "01.01 Bacon_and_Onion_Pizza": {
+        "ingredient": [
+            "bacon",
+            "mozzarella_cheese",
+            "pizza_dough",
+            "red_onion"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.02 BBQ_Chicken_Pizza": {
+        "ingredient": [
+            "grilled_chicken",
+            "mozzarella_cheese",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "bbq_sauce",
+            "tomato_sauce"
+        ]
+    },
+    "01.03 Buffalo_Chicken_Pizza": {
+        "ingredient": [
+            "anchovies",
+            "artichoke_hearts",
+            "bacon",
+            "black_olives",
+            "feta_cheese",
+            "fresh_basil_leaves",
+            "fresh_tomatoes",
+            "garlic",
+            "goat_cheese",
+            "grilled_chicken",
+            "ham",
+            "italian_seasoning",
+            "mozzarella_cheese",
+            "mushrooms",
+            "parmesan_cheese",
+            "pepperoni_slices",
+            "pineapple_chunks",
+            "pizza_dough",
+            "provolone_cheese",
+            "red_onion",
+            "ricotta_cheese",
+            "sausage",
+            "spinach_leaves",
+            "sun-dried_tomatoes"
+        ],
+        "liquid": [
+            "olive_oil",
+            "peppers",
+            "pesto_sauce",
+            "salt",
+            "tomato_sauce"
+        ]
+    },
+    "01.04 Four_Cheese_Pizza": {
+        "ingredient": [
+            "fresh_basil_leaves",
+            "mozzarella_cheese",
+            "parmesan_cheese",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.05 Hawaiian_Pizza": {
+        "ingredient": [
+            "ham",
+            "mozzarella_cheese",
+            "pineapple_chunks",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.06 Margherita_Pizza": {
+        "ingredient": [
+            "fresh_basil_leaves",
+            "garlic",
+            "mozzarella_cheese",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "olive_oil",
+            "tomato_sauce"
+        ]
+    },
+    "01.07 Meat_Lovers_Pizza": {
+        "ingredient": [
+            "bacon",
+            "ham",
+            "mozzarella_cheese",
+            "pepperoni_slices",
+            "pizza_dough",
+            "sausage"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.08 Mushroom_Pizza": {
+        "ingredient": [
+            "mozzarella_cheese",
+            "mushrooms",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.09 Pepperoni_Pizza": {
+        "ingredient": [
+            "mozzarella_cheese",
+            "pepperoni_slices",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.10 Pesto_Pizza": {
+        "ingredient": [
+            "fresh_basil_leaves",
+            "garlic",
+            "mozzarella_cheese",
+            "pizza_dough"
+        ],
+        "liquid": [
+            "olive_oil",
+            "tomato_sauce"
+        ]
+    },
+    "01.11 Spinach_and_Feta_Pizza": {
+        "ingredient": [
+            "feta_cheese",
+            "mozzarella_cheese",
+            "pizza_dough",
+            "spinach_leaves"
+        ],
+        "liquid": [
+            "tomato_sauce"
+        ]
+    },
+    "01.12 Supreme_Pizza": {
+        "ingredient": [
+            "anchovies",
+            "artichoke_hearts",
+            "bacon",
+            "black_olives",
+            "feta_cheese",
+            "fresh_basil_leaves",
+            "fresh_tomatoes",
+            "garlic",
+            "goat_cheese",
+            "grilled_chicken",
+            "ham",
+            "italian_seasoning",
+            "mozzarella_cheese",
+            "mushrooms",
+            "parmesan_cheese",
+            "pepperoni_slices",
+            "pineapple_chunks",
+            "pizza_dough",
+            "provolone_cheese",
+            "red_onion",
+            "ricotta_cheese",
+            "sausage",
+            "spinach_leaves",
+            "sun-dried_tomatoes"
+        ],
+        "liquid": [
+            "bbq_sauce",
+            "olive_oil",
+            "pesto_sauce",
+            "salt",
+            "tomato_sauce"
+        ]
+    },
+    "01.13 Vegetarian_Pizza": {
+        "ingredient": [
+            "black_olives",
+            "fresh_basil_leaves",
+            "fresh_tomatoes",
+            "garlic",
+            "italian_seasoning",
+            "mozzarella_cheese",
+            "mushrooms",
+            "parmesan_cheese",
+            "pizza_dough",
+            "red_onion",
+            "spinach_leaves"
+        ],
+        "liquid": [
+            "olive_oil",
+            "peppers",
+            "salt",
+            "tomato_sauce"
+        ]
+    },
+    "01.14 Veggie_Supreme_Pizza": {
+        "ingredient": [
+            "black_olives",
+            "fresh_basil_leaves",
+            "fresh_tomatoes",
+            "garlic",
+            "italian_seasoning",
+            "mozzarella_cheese",
+            "mushrooms",
+            "pizza_dough",
+            "red_onion",
+            "spinach_leaves"
+        ],
+        "liquid": [
+            "olive_oil",
+            "peppers",
+            "salt",
+            "tomato_sauce"
+        ]
+    },
+    "02.01 Bloody_Mary": {
+        "ingredient": [],
+        "liquid": [
+            "tomato_juice",
+            "vodka"
+        ],
+        "optional": [
+            "salt",
+            "ice_cubes",
+            "lime_slice",
+            "orange_slice",
+            "lemon_slice"
+        ]
+    },
+    "02.02 Caipirinha": {
+        "ingredient": [
+            "lime_slice",
+            "sugar_cubes"
+        ],
+        "liquid": [
+            "rum"
+        ],
+        "optional": [
+            "ice_cubes"
+        ]
+    },
+    "02.03 Cosmopolitan": {
+        "ingredient": [
+            "lime_slice"
+        ],
+        "liquid": [
+            "cranberry_juice",
+            "triple_sec",
+            "vodka"
+        ],
+        "optional": [
+            "ice_cubes"
+        ]
+    },
+    "02.04 Daiquiri": {
+        "ingredient": [
+            "lime_slice"
+        ],
+        "liquid": [
+            "rum"
+        ],
+        "optional": [
+            "sugar_cubes",
+            "ice_cubes",
+            "simple_syrup"
+        ]
+    },
+    "02.05 Gin_and_Tonic": {
+        "ingredient": [
+        ],
+        "liquid": [
+            "gin",
+            "tonic_water"
+        ],
+        "optional": [
+            "ice_cubes",
+            "simple_syrup",
+            "sliced_lemon"
+        ]
+    },
+    "02.06 Long_Island_Iced_Tea": {
+        "ingredient": [
+        ],
+        "liquid": [
+            "rum",
+            "tequila",
+            "vodka",
+            "gin"
+        ],
+        "optional": [
+            "lemon_slice",
+            "lime_slice",
+            "ice_cubes",
+            "soda_water",
+            "triple_sec",
+            "coca_cola"
+        ]
+    },
+    "02.07 Manhattan": {
+        "ingredient": [],
+        "liquid": [
+            "bitters",
+            "vermouth",
+            "whiskey"
+        ],
+        "optional": [
+            "ice_cubes"
+        ]
+    },
+    "02.08 Margarita": {
+        "ingredient": [
+            "lime_slice"
+        ],
+        "liquid": [
+            "triple_sec",
+            "tequila"
+        ],
+        "optional": [
+            "ice_cubes",
+            "salt"
+        ]
+    },
+    "02.09 Martini": {
+        "ingredient": [],
+        "liquid": [
+            "gin",
+            "vermouth"
+        ],
+        "optional": [
+            "ice_cubes",
+            "vodka"
+        ]
+    },
+    "02.10 Mojito": {
+        "ingredient": [
+            "mint",
+            "lime_slice"
+        ],
+        "liquid": [
+            "rum",
+            "soda_water"
+        ],
+        "optional": [
+            "ice_cubes",
+            "simple_syrup",
+            "sugar_cubes"
+        ]
+    },
+    "02.11 Negroni": {
+        "ingredient": [],
+        "liquid": [
+            "bitters",
+            "gin",
+            "vermouth"
+        ]
+    },
+    "02.12 Old_Fashioned": {
+        "ingredient": [
+            "sugar_cubes"
+        ],
+        "liquid": [
+            "bitters",
+            "whiskey"
+        ]
+    },
+    "02.13 Pina_Colada": {
+        "ingredient": [],
+        "liquid": [
+            "pineapple_juice",
+            "rum"
+        ]
+    },
+    "02.14 Purple_Rain": {
+        "ingredient": [],
+        "liquid": [
+            "cranberry_juice",
+            "pineapple_juice",
+            "rum",
+            "soda_water",
+            "vodka"
+        ]
+    },
+    "02.15 Screwdriver": {
+        "ingredient": [
+            "sliced_orange"
+        ],
+        "liquid": [
+            "vodka"
+        ]
+    },
+    "02.16 Sex_on_the_Beach": {
+        "ingredient": [],
+        "liquid": [
+            "cranberry_juice",
+            "pineapple_juice",
+            "vodka"
+        ]
+    },
+    "02.17 Whiskey_Sour": {
+        "ingredient": [
+            "lemons"
+        ],
+        "liquid": [
+            "simple_syrup",
+            "whiskey"
+        ]
+    },
+    "02.18 White_Russian": {
+        "ingredient": [
+            "ice_cubes"
+        ],
+        "liquid": [
+            "milk",
+            "vodka"
+        ]
+    },
+    "03.01 Tea": {
+        "ingredient": [],
+        "liquid": [
+            "water"
+        ]
+    },
+    "03.02 Coke": {
+        "ingredient": [],
+        "liquid": [
+            "coca-cola"
+        ]
+    }
+}

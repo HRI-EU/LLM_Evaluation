@@ -1,0 +1,4803 @@
+{
+    "domain": "The robot has four actions: pickup, putdown, stack, and unstack. The domain assumes a world where there are a set of blocks that can be stacked on top of each other, an arm that can hold one block at a time, and a table where blocks can be placed.\n\nThe actions defined in this domain include:\n\npickup: allows the arm to pick up a block from the table if it is clear and the arm is empty. After the pickup action, the arm will be holding the block, and the block will no longer be on the table or clear.\n\nputdown: allows the arm to put down a block on the table if it is holding a block. After the putdown action, the arm will be empty, and the block will be on the table and clear.\n\nstack: allows the arm to stack a block on top of another block if the arm is holding the top block and the bottom block is clear. After the stack action, the arm will be empty, the top block will be on top of the bottom block, and the bottom block will no longer be clear.\n\nunstack: allows the arm to unstack a block from on top of another block if the arm is empty and the top block is clear. After the unstack action, the arm will be holding the top block, the top block will no longer be on top of the bottom block, and the bottom block will be clear.\n",
+    "p01": {
+        "domain": "You have 3 blocks. \nb2 is on top of b3. \nb3 is on top of b1. \nb1 is on the table. \nb2 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b3. \nb3 should be on top of b1. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -55,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    45.1
+                ]
+            }
+        }
+    },
+    "p02": {
+        "domain": "You have 3 blocks. \nb3 is on top of b2. \nb1 is on top of b3. \nb2 is on the table. \nb1 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b3. \nb3 should be on top of b1. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            }
+        }
+    },
+    "p03": {
+        "domain": "You have 4 blocks. \nb3 is on top of b2. \nb1 is on top of b3. \nb4 is on the table. \nb2 is on the table. \nb1 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b1. \nb3 should be on top of b4. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    15.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            }
+        }
+    },
+    "p04": {
+        "domain": "You have 4 blocks. \nb4 is on top of b2. \nb3 is on top of b1. \nb1 is on top of b4. \nb2 is on the table. \nb3 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b2. \nb2 should be on top of b3. \nb3 should be on top of b4. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    60.1
+                ]
+            }
+        }
+    },
+    "p05": {
+        "domain": "You have 5 blocks. \nb4 is on top of b1. \nb2 is on top of b3. \nb3 is on top of b5. \nb1 is on top of b2. \nb5 is on the table. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b3. \nb3 should be on top of b5. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    30.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -15,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    45.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -15,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    60.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -15,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    75.1
+                ]
+            }
+        }
+    },
+    "p06": {
+        "domain": "You have 5 blocks. \nb5 is on top of b3. \nb4 is on top of b2. \nb2 is on top of b1. \nb3 is on top of b4. \nb1 is on the table. \nb5 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b2. \nb3 should be on top of b5. \nb4 should be on top of b1. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -55,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    45.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -55,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    60.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -55,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    75.1
+                ]
+            }
+        }
+    },
+    "p07": {
+        "domain": "You have 6 blocks. \nb5 is on top of b2. \nb2 is on top of b3. \nb3 is on top of b1. \nb4 is on the table. \nb6 is on the table. \nb1 is on the table. \nb6 is clear. \nb5 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb3 should be on top of b5. \nb4 should be on top of b3. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -55,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    45.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -55,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    60.1
+                ]
+            }
+        }
+    },
+    "p08": {
+        "domain": "You have 6 blocks. \nb5 is on top of b1. \nb4 is on top of b5. \nb3 is on top of b2. \nb1 is on top of b3. \nb6 is on top of b4. \nb2 is on the table. \nb6 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b6. \nb3 should be on top of b5. \nb6 should be on top of b2. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    60.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -45,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    75.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -45,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    90.1
+                ]
+            }
+        }
+    },
+    "p09": {
+        "domain": "You have 7 blocks. \nb4 is on top of b7. \nb3 is on top of b6. \nb7 is on top of b3. \nb2 is on the table. \nb6 is on the table. \nb1 is on the table. \nb5 is on the table. \nb1 is clear. \nb5 is clear. \nb2 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b2. \nb2 should be on top of b6. \nb3 should be on top of b7. \nb5 should be on top of b3. \nb6 should be on top of b5. \nb7 should be on top of b4. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -5,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    30.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -5,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    45.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -5,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    60.1
+                ]
+            }
+        }
+    },
+    "p10": {
+        "domain": "You have 7 blocks. \nb6 is on top of b3. \nb2 is on top of b5. \nb4 is on top of b7. \nb7 is on top of b1. \nb3 is on the table. \nb1 is on the table. \nb5 is on the table. \nb6 is clear. \nb2 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b7. \nb2 should be on top of b5. \nb3 should be on top of b2. \nb4 should be on top of b1. \nb5 should be on top of b6. \nb7 should be on top of b3. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -35,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -35,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    30.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    30.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -55,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    45.1
+                ]
+            }
+        }
+    },
+    "p11": {
+        "domain": "You have 8 blocks. \nb7 is on top of b5. \nb4 is on top of b2. \nb8 is on top of b3. \nb3 is on top of b7. \nb2 is on top of b1. \nb6 is on top of b4. \nb5 is on top of b6. \nb1 is on the table. \nb8 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b8. \nb2 should be on top of b3. \nb3 should be on top of b5. \nb4 should be on top of b2. \nb8 should be on top of b7. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -55,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    45.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -55,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    60.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -55,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    75.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -55,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    90.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -55,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    105.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    -55,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    120.1
+                ]
+            }
+        }
+    },
+    "p12": {
+        "domain": "You have 8 blocks. \nb7 is on top of b8. \nb8 is on top of b1. \nb1 is on top of b6. \nb6 is on top of b4. \nb4 is on the table. \nb2 is on the table. \nb3 is on the table. \nb5 is on the table. \nb7 is clear. \nb5 is clear. \nb2 is clear. \nb3 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b3. \nb2 should be on top of b8. \nb3 should be on top of b2. \nb4 should be on top of b7. \nb5 should be on top of b6. \nb6 should be on top of b4. \nb7 should be on top of b1. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    15.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -35,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    15.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -25,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -25,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    45.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    -25,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    60.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -25,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    75.1
+                ]
+            }
+        }
+    },
+    "p13": {
+        "domain": "You have 9 blocks. \nb5 is on top of b2. \nb2 is on top of b3. \nb3 is on top of b1. \nb8 is on top of b6. \nb1 is on top of b4. \nb6 is on top of b9. \nb9 is on top of b5. \nb4 is on the table. \nb7 is on the table. \nb7 is clear. \nb8 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b5. \nb3 should be on top of b1. \nb4 should be on top of b8. \nb5 should be on top of b3. \nb6 should be on top of b4. \nb8 should be on top of b7. \nb9 should be on top of b2. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    15.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    12,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -25,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    30.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -25,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    45.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -25,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    60.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -25,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    75.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    -25,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    90.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -25,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    105.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    -25,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    120.1
+                ]
+            }
+        }
+    },
+    "p14": {
+        "domain": "You have 9 blocks. \nb7 is on top of b2. \nb5 is on top of b1. \nb9 is on top of b7. \nb1 is on top of b3. \nb8 is on top of b9. \nb4 is on top of b6. \nb2 is on the table. \nb3 is on the table. \nb6 is on the table. \nb8 is clear. \nb5 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b2. \nb2 should be on top of b7. \nb3 should be on top of b5. \nb4 should be on top of b1. \nb5 should be on top of b6. \nb7 should be on top of b8. \nb8 should be on top of b3. \nb9 should be on top of b4. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -35,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    15.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -35,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    30.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    -45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    60.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -5,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    30.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -35,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -28,
+                    7,
+                    45.1
+                ]
+            }
+        }
+    },
+    "p15": {
+        "domain": "You have 10 blocks. \nb6 is on top of b3. \nb2 is on top of b10. \nb4 is on top of b8. \nb3 is on top of b1. \nb7 is on top of b4. \nb8 is on top of b6. \nb10 is on top of b7. \nb9 is on top of b2. \nb1 is on top of b5. \nb5 is on the table. \nb9 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b1. \nb3 should be on top of b10. \nb4 should be on top of b7. \nb6 should be on top of b8. \nb8 should be on top of b2. \nb9 should be on top of b4. \nb10 should be on top of b9. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    30.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -15,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    45.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -15,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    60.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    -15,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    75.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -15,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    90.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -15,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    105.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    -15,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    120.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -15,
+                    0,
+                    120.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    135.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    -15,
+                    0,
+                    135.1
+                ],
+                "max": [
+                    -8,
+                    7,
+                    150.1
+                ]
+            }
+        }
+    },
+    "p16": {
+        "domain": "You have 10 blocks. \nb2 is on top of b3. \nb7 is on top of b1. \nb10 is on top of b8. \nb3 is on top of b6. \nb6 is on top of b9. \nb5 is on top of b4. \nb9 is on top of b10. \nb4 is on top of b2. \nb1 is on the table. \nb8 is on the table. \nb7 is clear. \nb5 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b5. \nb2 should be on top of b10. \nb5 should be on top of b3. \nb7 should be on top of b4. \nb8 should be on top of b7. \nb9 should be on top of b2. \nb10 should be on top of b8. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    15.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    30.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    15,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    45.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    15,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    60.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    15,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    75.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    15,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    90.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    15,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    105.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    15,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    120.1
+                ]
+            }
+        }
+    },
+    "p17": {
+        "domain": "You have 11 blocks. \nb4 is on top of b10. \nb1 is on top of b11. \nb5 is on top of b2. \nb7 is on top of b8. \nb8 is on top of b1. \nb10 is on top of b7. \nb9 is on top of b6. \nb3 is on top of b4. \nb2 is on the table. \nb6 is on the table. \nb11 is on the table. \nb9 is clear. \nb5 is clear. \nb3 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb2 should be on top of b7. \nb5 should be on top of b4. \nb6 should be on top of b10. \nb7 should be on top of b3. \nb9 should be on top of b5. \nb10 should be on top of b9. \nb11 should be on top of b1. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    15.1
+                ]
+            },
+            "b11": {
+                "min": [
+                    45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    30.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    45.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    -5,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    30.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    60.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    45,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    75.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    45,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    90.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    45,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    105.1
+                ]
+            }
+        }
+    },
+    "p18": {
+        "domain": "You have 11 blocks. \nb5 is on top of b3. \nb1 is on top of b9. \nb7 is on top of b1. \nb2 is on top of b5. \nb3 is on top of b6. \nb6 is on top of b7. \nb11 is on top of b8. \nb9 is on top of b11. \nb10 is on top of b2. \nb4 is on the table. \nb8 is on the table. \nb10 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b4. \nb3 should be on top of b7. \nb4 should be on top of b11. \nb6 should be on top of b5. \nb7 should be on top of b2. \nb8 should be on top of b3. \nb10 should be on top of b9. \nb11 should be on top of b8. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -18,
+                    7,
+                    15.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    15.1
+                ]
+            },
+            "b11": {
+                "min": [
+                    15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    30.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    15,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    45.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    15,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    60.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    15,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    75.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    15,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    90.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    15,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    105.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    15,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    120.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    15,
+                    0,
+                    120.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    135.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    15,
+                    0,
+                    135.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    150.1
+                ]
+            }
+        }
+    },
+    "p19": {
+        "domain": "You have 12 blocks. \nb3 is on top of b8. \nb7 is on top of b10. \nb2 is on top of b5. \nb10 is on top of b11. \nb6 is on top of b1. \nb12 is on top of b9. \nb5 is on top of b7. \nb4 is on top of b12. \nb11 is on the table. \nb1 is on the table. \nb9 is on the table. \nb8 is on the table. \nb6 is clear. \nb3 is clear. \nb2 is clear. \nb4 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb5 should be on top of b10. \nb6 should be on top of b12. \nb7 should be on top of b4. \nb8 should be on top of b3. \nb9 should be on top of b2. \nb10 should be on top of b8. \nb11 should be on top of b7. \nb12 should be on top of b11. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b11": {
+                "min": [
+                    45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    15.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -55,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    15.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    25,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    32,
+                    7,
+                    15.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    15.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    30.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    30.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -55,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -48,
+                    7,
+                    30.1
+                ]
+            },
+            "b12": {
+                "min": [
+                    25,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    32,
+                    7,
+                    30.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    25,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    32,
+                    7,
+                    45.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    45.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    60.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    45,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    52,
+                    7,
+                    75.1
+                ]
+            }
+        }
+    },
+    "p20": {
+        "domain": "You have 12 blocks. \nb4 is on top of b10. \nb11 is on top of b4. \nb5 is on top of b8. \nb12 is on top of b2. \nb3 is on top of b9. \nb1 is on top of b12. \nb10 is on top of b3. \nb9 is on top of b1. \nb7 is on the table. \nb2 is on the table. \nb6 is on the table. \nb8 is on the table. \nb6 is clear. \nb11 is clear. \nb7 is clear. \nb5 is clear. \nYour arm is empty. ",
+        "goal": "Your goal is to move the blocks. \nb1 should be on top of b6. \nb5 should be on top of b3. \nb6 should be on top of b2. \nb8 should be on top of b9. \nb9 should be on top of b10. \nb10 should be on top of b1. \nb11 should be on top of b12. \nb12 should be on top of b8. \n",
+        "scene3D": {
+            "table1": {
+                "min": [
+                    -55,
+                    0,
+                    0
+                ],
+                "max": [
+                    -45,
+                    10,
+                    0.1
+                ]
+            },
+            "table2": {
+                "min": [
+                    -45,
+                    0,
+                    0
+                ],
+                "max": [
+                    -35,
+                    10,
+                    0.1
+                ]
+            },
+            "table3": {
+                "min": [
+                    -35,
+                    0,
+                    0
+                ],
+                "max": [
+                    -25,
+                    10,
+                    0.1
+                ]
+            },
+            "table4": {
+                "min": [
+                    -25,
+                    0,
+                    0
+                ],
+                "max": [
+                    -15,
+                    10,
+                    0.1
+                ]
+            },
+            "table5": {
+                "min": [
+                    -15,
+                    0,
+                    0
+                ],
+                "max": [
+                    -5,
+                    10,
+                    0.1
+                ]
+            },
+            "table6": {
+                "min": [
+                    -5,
+                    0,
+                    0
+                ],
+                "max": [
+                    5,
+                    10,
+                    0.1
+                ]
+            },
+            "table7": {
+                "min": [
+                    5,
+                    0,
+                    0
+                ],
+                "max": [
+                    15,
+                    10,
+                    0.1
+                ]
+            },
+            "table8": {
+                "min": [
+                    15,
+                    0,
+                    0
+                ],
+                "max": [
+                    25,
+                    10,
+                    0.1
+                ]
+            },
+            "table9": {
+                "min": [
+                    25,
+                    0,
+                    0
+                ],
+                "max": [
+                    35,
+                    10,
+                    0.1
+                ]
+            },
+            "table10": {
+                "min": [
+                    35,
+                    0,
+                    0
+                ],
+                "max": [
+                    45,
+                    10,
+                    0.1
+                ]
+            },
+            "table11": {
+                "min": [
+                    45,
+                    0,
+                    0
+                ],
+                "max": [
+                    55,
+                    10,
+                    0.1
+                ]
+            },
+            "table12": {
+                "min": [
+                    55,
+                    0,
+                    0
+                ],
+                "max": [
+                    65,
+                    10,
+                    0.1
+                ]
+            },
+            "b7": {
+                "min": [
+                    5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    12,
+                    7,
+                    15.1
+                ]
+            },
+            "b2": {
+                "min": [
+                    -45,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    15.1
+                ]
+            },
+            "b6": {
+                "min": [
+                    -5,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    2,
+                    7,
+                    15.1
+                ]
+            },
+            "b8": {
+                "min": [
+                    15,
+                    0,
+                    0.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    15.1
+                ]
+            },
+            "b5": {
+                "min": [
+                    15,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    22,
+                    7,
+                    30.1
+                ]
+            },
+            "b12": {
+                "min": [
+                    -45,
+                    0,
+                    15.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    30.1
+                ]
+            },
+            "b1": {
+                "min": [
+                    -45,
+                    0,
+                    30.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    45.1
+                ]
+            },
+            "b9": {
+                "min": [
+                    -45,
+                    0,
+                    45.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    60.1
+                ]
+            },
+            "b3": {
+                "min": [
+                    -45,
+                    0,
+                    60.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    75.1
+                ]
+            },
+            "b10": {
+                "min": [
+                    -45,
+                    0,
+                    75.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    90.1
+                ]
+            },
+            "b4": {
+                "min": [
+                    -45,
+                    0,
+                    90.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    105.1
+                ]
+            },
+            "b11": {
+                "min": [
+                    -45,
+                    0,
+                    105.1
+                ],
+                "max": [
+                    -38,
+                    7,
+                    120.1
+                ]
+            }
+        }
+    }
+}

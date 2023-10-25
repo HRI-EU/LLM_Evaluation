@@ -1,0 +1,7 @@
+[tool.pylint.main]
+ignore-patterns = ["test_*"]
+
+[tool.pylint.messages_control]
+enable = ["useless-suppression"]
+max-line-length = 120
+
